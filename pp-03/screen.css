@@ -30,7 +30,6 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 #content {
   display: flex;
   flex-flow: column-reverse nowrap;
-
 }
 
 #three,
@@ -46,12 +45,18 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
   #two,
   #one {
     flex: 1 0 50%;
-    height: 500vw;
+    height: 50vw;
   }
   #three {
     flex: 1 0 100%;
   }
+}
 
 @media screen and (min-width: 800px) {
-
+  #three,
+  #two,
+  #one {
+    flex: 1 0 335;
+    height: 33vw;
+  }
 }
