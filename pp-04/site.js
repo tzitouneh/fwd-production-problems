@@ -3,16 +3,25 @@
   call outputs the correct value (5) for x. You must still use
   `x` as the variable inside the function, however.
 */
+'use strict';
 
-x = 5;
+var x = 5
 
 function double(num) {
+  var inputnum= +num;
+  if (typeof(inputnum) !== 'number' || isNaN(inputnum)) {
+    console.log( 'you wrote ' + num + ' but you should insert a number');
+    return;
+  }
   x = num * 2;
   return x;
 }
 
-double(6);
+double('dog');
+
+
 console.log('The value of x is', x, '-- it should be 5.');
+
 
 /*
   Step 2. Rewrite the JavaScript `double()` function above so that
