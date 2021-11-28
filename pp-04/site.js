@@ -5,14 +5,21 @@
 */
 'use strict';
 
+var x = 5
+
 function double (num) {
+  var inputnum = +num;
+  if (typeof(inputnum) !== 'number' || isNaN(inputnum)) {
+    console.log( "you wrote " + num + " but you should insert a number");
+    return;
+  }
   x = num * 2;
   return x;
-  }
+}
 
-double(10);
+double('dog');
 
-var x = 5
+
 console.log('The value of x is', x, '-- it should be 5.');
 
 
